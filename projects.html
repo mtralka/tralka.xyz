@@ -1,53 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-us">
+{% extends 'base.html' %}
 
-	<head>
-		<meta charset="UTF-8">
-
-		<title>
-			Matthew Tralka
-		</title>
-		
-		<!--CSS-->
-		<link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }}">
-
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-	</head>
-
-	<body class="dynamic background-picture">
-
-		<div class="sidebar">
-
-			<div class="sidebar-about">
-
-				<div class="sidebar-about-title">
-
-					<h1>
-						<a class="sidebar-title"href="/">
-							Matthew<br/> Tralka
-						</a>
-					</h1>
-
-				</div>
-				
-				<div class="sidebar-about-subtext">
-
-					<h2>Geographer with a passion for technology</h2>
-
-				</div>
-
-			</div>
-
-			<nav class="sidebar-nav">
-
-				<a class="sidebar-nav-item" href="/">Home</a>
-				<a class="sidebar-nav-item" href="/about">About</a>
-				<a class="sidebar-nav-item" href="/projects">Projects</a>
-
-			</nav>
-
-		</div>
+{% block body %}
 
 		<div class="visible-background">
 
@@ -156,7 +109,7 @@
 
 								<p>
 
-									tralka.xyz is a scratch-built HTML5 and CSS3 personal website running on a Dockerized Flask nginx stack. tralka.xyz is lightweight, responsive, and suitable for purpose. tralka.xyz incorporates leaflet.js using Folium for dynamic web mapping with PostGres database integration.
+									tralka.xyz is a scratch-built HTML5 and CSS3 personal website running on a Dockerized Flask uWSGI nginx stack. tralka.xyz is lightweight, responsive, and suitable for purpose. tralka.xyz incorporates leaflet.js using Folium for dynamic web mapping with PostGreSQL database integration.
 
 
 								</p>
@@ -210,6 +163,4 @@
 
 		</div>
 
-	</body>
-	
-</html>
+{% endblock %}

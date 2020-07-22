@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+		<div class="visible-background">
+
+			<div class="content-header">
+
+					<img src="{{ url_for('static', filename='me.jpg') }}" alt="Matthew Tralka" class="avatar center" id="prof-pic"/>
+
+					<p class="alert">
+						Download my CV <a href="#">here!</a>
+					</p>
+
+					<div class="content-main">
+
+						<p>
+
+							<big>Hi!</big> My name is Matthew Tralka and I'm a geographer with a passion for using technology to solve environmental issues. I am currently attending the University of Maryland College Park as an <b>Environmental Science and Policy: Land Use</b> & <b>GIS and Computer Cartography</b> double major. Previously, I attended Franklin University Switzerland in Lugano, Ticino, CH. 
+
+						</p>
+
+					<p>
+						<b>Primary Interests:</b> Environmental Science, Geography, Crowdsourced 'Big Data', GIS, Remote Sensing
+					</p><br/><br/>
+
+					<h4>
+						Email me at mtralka [at] umd.edu |
+						Visit me on <a href="https://github.com/mtralka">Github</a> | 
+						Connect with me on <a href="https://www.linkedin.com/in/matthewtralka/">LinkedIn</a>
+
+						
+					</h4>
+
+				</div>
+
+			</div>
+
+		</div>
+
+{% endblock %}
