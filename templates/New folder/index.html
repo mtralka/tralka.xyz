@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Matthew Tralka</title>
+
+        
+        <link rel="stylesheet" href="{{ url_for ('static', filename= 'normalize.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for ('static', filename= 'style.css') }}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- BUTTON LOGIC -->
+        <script>
+
+            $(document).ready(function(){
+                            $("#aboutbutton").click(function() {
+                                $('.subnav').toggle();
+                            });
+                            $("#navbutton").click(function() {
+                                $('.subnav').toggle();
+                            });
+                        });
+
+        </script>
+
+        <!-- LEAFLET.js -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+        <!-- MAP DATA -->
+
+        <script src="{{ url_for ('static', filename= 'countriesVisited.geojson') }}"></script>
+        
+        <script src="{{ url_for ('static', filename= 'sorlandetData.json') }}"></script>
+        
+
+    </head>
+
+    <body>
+        <header>
+
+            <div class="card nav-card" id='top'>
+
+                <nav class='navbutton' id='navbutton'>
+
+                    <img src="{{ url_for ('static', filename= 'burger.png') }}">
+                    
+
+                </nav>
+
+                <nav class='subnav' style="display: none;">
+
+
+                    <a href="#education" class='item'>
+
+                        education
+
+                    </a>
+
+                    <a href="#skills" class='item'>
+
+                        skills
+
+                    </a>
+
+                    <a href="#experiences" class='item'>
+
+                        experience
+
+                    </a>
+                    
+                    <a href="#places" class='item'>
+
+                        where I've been
+
+                    </a>
+
+                    <a href="#projects" class='item'>
+
+                        projects
+
+                    </a>
+
+                </nav>
+
+            </div>
+            
+        </header>
+        
+        <main>
+
+            <section class="card full-card profile" id="about" >
+                
+                
+                <h2 class="title" style="display: none;">
+
+                    About.
+
+                </h2>
+                
+                <img src="{{ url_for ('static', filename= 'me.jpg') }}" alt='Profile Picture'>
+                
+
+                <p class='content'>
+
+                    Hi, my name is Matthew Tralka and I'm a <strong>geographer</strong> with a passion for using <strong>technology</strong> 
+                    to solve environmental issues. I am perseverant, goal-oriented, and dedicated. I aim to pursue graduate education in the field
+                    of data science and GIS. 
+                    
+                </p>
+
+                <footer class='social'>
+
+                    <p class="item">
+
+                        matthew@tralka.xyz
+
+                    </p>
+
+                    <p class="item">
+
+                        Star me on <a href="https://github.com/mtralka">Github</a>
+
+                    </p>
+
+                    <p class="item">
+
+                        Connect on <a href="https://www.linkedin.com/in/matthewtralka/">LinkedIn</a>
+                        
+                    </p>
+
+                </footer>
+                    
+            </section>
+
+            <section class="card full-card" id="education">
+                
+                <h2>
+
+                    Education.
+
+                </h2>
+                
+                <ul class='content'>
+                    <li><strong>University of Maryland College Park</strong>: 2020 - 2022 <em>est.</em>
+                    
+                        <ul>
+                            <li>GPA: 4.0</li>
+                            <li>GIS and Computer Cartography</li>
+                            <li> Environmental Science and Policy: Land Use</li>
+                        </ul>
+                    
+                    <li><strong>Franklin University Switzerland</strong>: 2018 - 2020 
+                    
+                        <ul>
+                            <li>Major GPA: 3.945</li>
+                            <li>GPA: 3.869</li>
+                            <li> Environmental Studies: Emphasis Science</li>
+                        </ul>
+
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="card full-card" id="skills">
+
+                <h2>
+
+                    Skills.
+
+                </h2>
+                
+                <ul class='content'>
+
+                    <li><strong>Python</strong>: (Geo)Pandas, Numpy, Rasterio, Shapely, Matplotlib, Rtree, Folium, Tkinter</li>
+
+                    <li><strong>GIS</strong>: QGIS 3.X, ArcMap 10.7.X, ArcGIS Online</li> 
+
+                    <li><strong>Frontend</strong>: Leaflet, HTML5, CSS3, JavaScript (JQuery), Jinja</li> 
+
+                    <li><strong>Backend</strong>: Flask, Nginx, Docker, Linux (Ubuntu Server)</li> 
+
+                </ul>
+
+            </section>
+
+            <section class="card full-card" id="experiences">
+                
+                
+                <h2>
+
+                    Professional Experiences.
+
+                </h2>
+                
+                <ul class='content'> 
+
+                    <li><strong>NASA COVID-19 HAM SAR Observation</strong>: 2020
+                    
+                        <ul>
+
+                            <li>Independent and efficient volunteer in support of NASA’s Human Activity Monitoring (HAM) with Satellite Aperture Radar (SAR) Observations Project</li>
+
+                            <li>Responsible for polygon generation and digitalization based on commercial satellite imagery</li>
+                            
+                        </ul>
+                    
+                    <li><strong>USGS National Map Corps</strong>: 2018 - 2020 
+                    
+                        <ul>
+
+                            <li>Advanced editor and peer reviewer for The National Map</li>
+
+                            <li>Leveraging imagery analysis and research skills to locate and record areas of interest in the United States </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="card full-card been" id="places">
+                
+                <h2>
+
+                    Places Traveled.
+
+                </h2>
+                
+                <div class='main-img'>
+
+                    <div id='map-places' style="height:100%; width:100%"></div>
+
+                    <!-- MAP PLACES LEAFLET -->
+                    <script type="text/javascript">
+
+                        var mapPlaces = L.map('map-places', {
+
+                        center: [38.89 , -31.75],
+                        zoom: 3
+
+                        });
+
+                        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                            maxZoom: 10,
+                            minZoom: 3,
+                            id: 'mapbox/streets-v11',
+                            tileSize: 512,
+                            zoomOffset: -1,
+                            accessToken: 'pk.eyJ1IjoibXRyYWxrYSIsImEiOiJja2VjNm5hdWEwNjQ4MnZ0cHlycXlndnN5In0.mfQAFUPzfGZeMht0EToJBA'
+                        }).addTo(mapPlaces);
+
+                        // Sorlandet Line Layer
+                        var sorlandetLineLayer = L.geoJson(sorlandetLine).addTo(mapPlaces);
+                        
+                        // Sorlandet Point Layer Symbology
+                        var sorlandetPointsLayer = L.geoJson(sorlandetPoints, {
+                            style: function(feature) {
+
+                                return {
+                                    color: "red" ,
+                                    fillColor: 'red',
+                                    opacity: .0,
+                                    weight: 2
+
+                                };
+                            },
+                            pointToLayer: function(feature, latlng) {
+                                return new L.CircleMarker(latlng, {
+                                    radius: 0, 
+                                    fillOpacity: 0.0,
+                                    
+                                    
+                                });
+                            },
+                            onEachFeature: function (feature, layer) {
+                                layer.bindPopup( feature.properties.datetime +
+                                    "<br/> Course: " + feature.properties.course + "&#176;" +
+                                    " at " + feature.properties.speed +
+                                    "<br/>" + feature.properties.temp + "&#176;C at " + feature.properties.altitude + "m above sea level"
+                                    );
+                            }
+                        }).addTo(mapPlaces);
+
+                        // Countries Visited Layer
+                        var countriesVisitedLayer = L.geoJSON(countriesVisited, {
+
+                        style: function(feature) {
+                                return {
+                                    color: "green" ,
+                                    fillColor: 'green',
+                                    opacity: .4,
+                                    weight: 2
+
+                                };
+                            },
+
+                            onEachFeature: function (feature, layer) {
+                                layer.bindPopup( feature.properties.CNTRY_NAME
+                                    );
+                            }
+
+                        }).addTo(mapPlaces);
+
+                        // Zoom SorldandetPointsLayer Modifier
+                        mapPlaces.on('zoomend', function() {
+                            var currentZoom = mapPlaces.getZoom();
+
+                            if (currentZoom > 3 ) {
+
+                                var myRadius = 3;
+                                var myWeight = 2;
+                                var opacity = .7;
+
+                                sorlandetPointsLayer.setStyle({radius: myRadius, weight: myWeight, opacity : opacity });
+
+                            }
+                            else {
+
+                                var myRadius = 1;
+                                var myWeight = 2;
+                                var opacity = .0;
+
+                                sorlandetPointsLayer.setStyle({radius: myRadius, weight: myWeight, opacity : opacity });
+                            }
+
+                        });
+
+                    </script>
+
+                </div>
+
+            </section>
+
+            <div class="card nav-card" id='projects'>
+
+                <h2>
+
+                    Projects.
+
+                </h2>
+
+            </div>
+
+            <div class='card project-card-container'>
+
+                <a href='https://classyfi.photos/' target="_blank" class="project-card-link">
+
+                    <article class='card project-card'>
+
+                        <h2>
+        
+                            ClassyFi
+        
+                        </h2>
+
+                        <h3>
+
+                            Flask, Nginx, Linux, HTML5 / CSS3, BULMA, gSheets API v4
+
+                        </h3>
+        
+                        <div class='content'>
+        
+                            <p>
+        
+                                ClassyFi is an in-browser <strong>photo classification</strong> program featuring real-time integration with <strong>Google Sheets</strong> 
+                                for dynamic multi-user categorization and data-management. With an easy-to-use interface and open source customizability, 
+                                ClassyFi is the optimal tool for manually classifying large photo datasets.
+        
+                            </p>
+        
+                        </div>
+        
+                    </article>
+                </a>
+
+                <a href='https://github.com/mtralka/FLICKR-GeoSearch' target="_blank" class="project-card-link">
+                    <article class='card project-card'>
+
+                        <h2>
+        
+                            Flickr GeoSearch
+        
+                        </h2>
+
+                        <h3>
+
+                            Python, Flickr API, Tkinter
+
+                        </h3>
+        
+                        <div class='content'>
+        
+                            <p>
+        
+                                Flickr GeoSearch is an all-inclusive <strong>python</strong> application that leverages the Flickr API to execute <strong>geospatial 
+                                photo searches</strong> across the entire Flickr photo community. Simple to use and distribute, 
+                                Flickr GeoSearch opens the door for anyone to use and analyze social media big data. Open source friendly 
+                                and licensed under GNU GPL v3.
+        
+                            </p>
+        
+                        </div>
+        
+                    </article>
+                </a>
+
+                <a href='https://tralka.xyz' target="_blank" class="project-card-link">
+                    
+                    <article class='card project-card'>
+                        
+                        <h2>
+        
+                            tralka.xyz
+        
+                        </h2>
+
+                        <h3>
+
+                            HTML5 / CSS3, Flask, Leaflet
+
+                        </h3>
+        
+                        <div class='content'>
+        
+                            <p>
+        
+                                tralka.xyz is a scratch-built HTML5 and CSS3 personal website running on a Dockerized Flask 
+                                uWSGI nginx stack. tralka.xyz is lightweight, responsive, and suitable for purpose. tralka.xyz 
+                                incorporates leaflet.js using Folium for dynamic web mapping with PostGreSQL database integration.
+        
+                            </p>
+        
+                        </div>
+
+                    </article>
+
+                </a>
+
+                <a href='#' target="_blank" class="project-card-link">
+                    
+                    <article class='card project-card'>
+                        
+                        <h2>
+        
+                            Electric Vehicle Charger Distribution
+        
+                        </h2>
+
+                        <h3>
+
+                            QGIS
+
+                        </h3>
+        
+                        <div class='content'>
+        
+                            <img src="{{ url_for ('static', filename= 'ev-distribution.png') }}" alt="Electric Vehicle Charger Distribution in Maryland">
+                            
+                            <!--
+                            <p>
+        
+                                tralka.xyz is a scratch-built HTML5 and CSS3 personal website running on a Dockerized Flask 
+                                uWSGI nginx stack. tralka.xyz is lightweight, responsive, and suitable for purpose. tralka.xyz 
+                                incorporates leaflet.js using Folium for dynamic web mapping with PostGreSQL database integration.
+        
+                            </p>
+                            -->
+                        </div>
+
+                    </article>
+
+                </a>
+
+            </div>
+
+
+        </main>
+
+        <footer class='page-footer' style="overflow: hidden;">
+
+            <a class='back-to-top' href='#top'>
+
+                <img src="{{ url_for ('static', filename= 'up-arrow.png') }}" alt="back to top">
+                
+
+            </a>
+
+            <p>
+
+                &#169; 2020 Matthew Tralka
+
+            </p>
+
+        </footer>
+
+    </body>
+
+</html>
