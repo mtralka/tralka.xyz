@@ -13,6 +13,3 @@ export default defineConfig({
     require('windicss/plugin/typography')
   ]
 })
-
-
-// accent: "#d97706",

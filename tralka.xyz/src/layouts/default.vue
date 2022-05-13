@@ -23,7 +23,6 @@ const route = useRoute();
 					</p>
 					<div>
 						<RouterView :class="useRouter().currentRoute.value.meta.contentClass" />
-						<!-- <IndexContent text="left " font="" class="text-body" ref="markdown" /> -->
 					</div>
 				</div>
 			</main>

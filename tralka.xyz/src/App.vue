@@ -1,20 +1,3 @@
-<script setup lang="ts">
-import { useDark } from '@vueuse/core';
-
-const isDark = useDark();
-
-useHead({
-	title: 'Vitesse',
-	meta: [
-		{ name: 'description', content: 'Opinionated Vite Starter Template' },
-		{
-			name: 'theme-color',
-			content: computed(() => (true ? '#00aba9' : '#ffffff')),
-		},
-	],
-});
-</script>
-
 <template>
 	<div overflow="x-hidden">
 		<RouterView />
@@ -24,12 +7,6 @@ useHead({
 <style>
 #app {
 	font-family: 'Inter', sans-serif;
-	/* font-family: Avenir, Helvetica, Arial, sans-serif; */
-	/* -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px; */
 }
 
 .caption {
@@ -75,8 +52,4 @@ useHead({
 	visibility: visible;
 	@apply text-white text-xs;
 }
-
-/* * {
-	outline: solid 1px red;
-} */
 </style>
