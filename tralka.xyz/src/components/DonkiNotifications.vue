@@ -7,7 +7,7 @@ const notifications: Ref<Array<iNotification> | null> = ref(null);
 
 onMounted(async () => {
 	const data = await getNASANotifications();
-	notifications.value = data.slice(0, 30);
+	notifications.value = data.slice(0, 10);
 	console.log('inside', notifications);
 });
 

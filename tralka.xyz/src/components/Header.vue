@@ -16,9 +16,9 @@ const route = useRoute();
 				<li v-for="item in headerItems" :key="item.name">
 					<RouterLink
 						:to="item.path"
-						border="md:b-2"
+						border="b-1 md:b-2"
 						:class="[route.name === item.name ? 'border-accent' : 'border-transparent hover:border-gray-300']"
-						p="2 md:2"
+						p="y-2 x-1 md:2"
 						class="cursor-pointer capitalize"
 					>
 						{{ item.name }}
