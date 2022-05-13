@@ -3,7 +3,7 @@ title: Toolbox - Matthew Tralka
 
 ---
 
-Technologies, frameworks, and compilers are all *tools* to do a job, a means to an end. I may prefer Vue over React or JSON over TOML, but I'll always use the best tool for the job. I love adding tools my toolbox and learning new technologies as I go.
+Technologies, frameworks, and compilers are all *tools* to do a job, a means to an end. I may prefer Vue over React or YAML over TOML, but I'll always use the best tool for the job. I love adding tools to my toolbox and learning new technologies as I go.
 
 <ResponsiveGrid class="justify-center" p="t-14" as="ul" >
 
