@@ -61,6 +61,6 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    onFinished() { generateSitemap() },
+    onFinished() { generateSitemap({hostname: 'https://tralka.xyz'}) },
   },
 })
