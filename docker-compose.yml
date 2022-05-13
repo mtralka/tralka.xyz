@@ -1,0 +1,15 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    restart: unless-stopped
+    ports: 
+      - 3000:3000
+      - 4173:4173
+    volumes: 
+      - ./tralka.xyz:/tralka.xyz
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    tty: true

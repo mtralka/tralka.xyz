@@ -1,0 +1,44 @@
+{
+  "name": "tralka.xyz",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint --cache --fix .",
+    "dev": "vite --host",
+    "build": "vite-ssg build",
+    "preview": "vite preview --host"
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.4.2",
+    "vue": "^3.2.25",
+    "vue3-markdown-it": "^1.0.10"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.40",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vueuse/head": "^0.7.6",
+    "critters": "0.0.16",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.7.1",
+    "unplugin-icons": "^0.14.3",
+    "unplugin-vue-components": "^0.19.5",
+    "vite": "^2.9.7",
+    "vite-plugin-md": "^0.13.1",
+    "vite-plugin-pages": "^0.23.0",
+    "vite-plugin-vue-layouts": "^0.6.0",
+    "vite-plugin-webfont-dl": "^2.0.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "vite-ssg": "^0.20.0",
+    "vite-ssg-sitemap": "^0.2.6",
+    "vue-router": "^4.0.15",
+    "vue-tsc": "^0.34.7",
+    "windicss": "^3.5.2"
+  }
+}

@@ -1,0 +1,53 @@
+[
+	{
+		"name": "YourPhotos",
+		"description": "Open source and fully featured implementation of Google Photos, designed to ease the transition to self-hosted solutions",
+		"links": {
+			"Repository": "https://github.com/mtralka/YourPhotos"
+		}
+	},
+	{
+		"name": "SMASH - Website",
+		"description":
+			"Designed and developed static CMS-fed website for SMASH labs at UMD. Built with Nuxt, TailwindCSS, Netlify, & NetlifyCMS",
+		"links": {
+			"Website": "https://geosmash.net/",
+			"Repository": "https://github.com/GEOSMASH/SMASH"
+		}
+	},
+	{
+		"name": "MGWR Visualizer",
+		"description":
+			"Novel interactive visualization layer for Multiscale Geographically Weighted Regression. Built with Python, Vue 3, Pinia, & DeckGL",
+		"links": {
+			"Website": "https://mgwrvisualizer.netlify.app/",
+			"Repository": "https://github.com/mtralka/MGWRVisualizer"
+		}
+	},
+	{
+		"name": "GeoBuckets",
+		"description":
+			"Lightweight Javascript (TypeScript, really) library for classification. Dependency free, tested, and type safe. Built with TypeScript",
+		"links": {
+			"NPM": "https://www.npmjs.com/package/geobuckets",
+			"Repository": "https://github.com/mtralka/GeoBuckets"
+		}
+	},
+	{
+		"name": "EOPlatform",
+		"description":
+			"eoplatform aims to simplify Remote Sensing by providing information on a wide swath of RS platforms and spectral composites. Made for scientists, educators, and hobbiests alike. Built with Python",
+		"links": {
+			"Repository": "https://github.com/mtralka/EOPlatform"
+		}
+	},
+	{
+		"name": "OpenGLAM",
+		"description":
+			"An open-source implementation of NASA's Global Agriculture Monitoring System. Built with Vue 3, DeckGL, Mapbox, & Pinia",
+		"links": {
+			"Website": "https://openglam-testing.netlify.app/",
+			"Repository": "https://github.com/mtralka/OpenGLAM"
+		}
+	}
+]
